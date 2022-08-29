@@ -93,7 +93,6 @@ a {
     url("https://images.pexels.com/photos/889996/pexels-photo-889996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
       no-repeat bottom;
   background-size: cover;
-  /* width: 100%; */
   height: 50vh;
   display: flex;
   align-items: center;
@@ -260,6 +259,9 @@ a {
   align-items: center;
   justify-content: start;
   flex-direction: row;
+}
+.copy {
+  border-top: 1px solid $color-black;
 }
 @media screen and (max-width: 768px) {
   .links {

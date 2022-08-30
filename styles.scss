@@ -14,13 +14,13 @@ $gradient-dark: linear-gradient(
 );
 $gradient: linear-gradient(
   to right,
-  rgba(242, 158, 1, 0.756),
+  rgba(242, 158, 1, 0.687),
   rgba(236, 36, 76, 0.604)
 );
 $color-gradient: linear-gradient(
   to right,
-  rgba(242, 158, 1, 0.62),
-  rgba(236, 36, 76, 0.98)
+  rgba(242, 158, 1, 0.804),
+  rgb(236, 36, 76)
 );
 $hero-font-size: 12px;
 $light-gray: #f9f9f9;
@@ -45,18 +45,31 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.nav {
+  width: 100vw;
+  height: 10vh;
+}
 .navbarT {
-  position: fixed;
-  background-color: #000 !important;
+  background-color: rgba(0, 0, 0, 0.948) !important;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row !important;
+  background-color: red;
 }
 .brand {
   margin: 0px 10px;
   color: $color-white;
+}
+.brand-1 {
+  margin-left: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand-1 i {
+  font-size: 30px;
 }
 .brand i,
 .bx-menu {
@@ -67,7 +80,7 @@ a {
 }
 .links ul {
   margin: 10px;
-  padding: 10px 20px;
+  padding: 8px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,12 +90,15 @@ a {
 }
 .links ul li a {
   color: $color-white;
-  font-size: 12px;
+  font-size: 11px;
+  margin: 1px 5px;
 }
 .btn-color-top {
   background: $color-orange;
   color: $color-white;
   font-size: 12px;
+  padding: 4px 22px;
+  font-weight: 500;
 }
 .header {
   background: linear-gradient(
@@ -93,21 +109,30 @@ a {
     url("https://images.pexels.com/photos/889996/pexels-photo-889996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
       no-repeat bottom;
   background-size: cover;
-  height: 50vh;
+  min-height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin: 0px auto;
 }
-.header-title,
+
+.header-title {
+  font-size: 40px;
+  font-weight: 300;
+  margin: 68px 0;
+}
 .title {
   font-weight: 200;
 }
 .form-wrapper {
   font-size: $hero-font-size;
   color: $color-white;
-  position: relative;
+  margin: 20px 0;
+  padding: 8px 0px 8px 20px;
+  border-radius: 5px;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 .form,
@@ -117,14 +142,29 @@ a {
   align-items: center;
   justify-content: space-between;
 }
+.form-group input {
+  border-radius: 0 !important;
+}
+.form-group input::placeholder {
+  color: $color-white;
+}
+.form-control-label {
+  font-size: 17px;
+  font-weight: 200;
+  margin: 0px 20px 0px 20px;
+}
 
 .btn-h {
   border: none;
   display: flex;
   align-items: center;
-  font-size: $hero-font-size;
+  font-size: 15px;
   text-align: start;
   color: $color-white;
+}
+.btn-h i {
+  font-weight: lighter;
+  margin-left: 10px;
 }
 .bx-arrow-back {
   transform: rotate(180deg);
@@ -138,9 +178,8 @@ a {
 .label::after {
   content: "";
   display: block;
-  width: 0.2px;
-  height: 40px;
-  border: 1px solid #fff;
+  height: 50px;
+  border: 0.01px solid rgba(255, 255, 255, 0.577);
 }
 .form-control {
   display: flex;
@@ -148,11 +187,12 @@ a {
   justify-content: space-between;
   flex-direction: row-reverse !important;
   font-size: $hero-font-size;
-  background: rgba(0, 0, 0, 0.375);
+  background: rgba(62, 62, 62, 0.239);
   border: none;
-  padding: 10px 15px;
+  padding: 14px 15px;
   border-radius: none !important;
   color: $color-white;
+  font-weight: 200;
 }
 .hero-about {
   text-align: center;
@@ -183,15 +223,17 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 .about-conf {
   padding: 5px 30px;
 }
 .section-about-images .card {
-  margin: 10px;
+  margin: 30px 10px;
   border: none !important;
   background: transparent;
   border-radius: 0 !important;
   text-transform: uppercase;
+  width: 16rem;
 }
 .card-body {
   padding: 10px 0;
@@ -208,7 +250,7 @@ a {
   letter-spacing: 0.9px;
 }
 .card-img-top {
-  height: 180px;
+  height: 150px;
 }
 .section-view {
   /* padding: 10px; */

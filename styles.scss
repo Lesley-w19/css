@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  max-width: 100vw !important;
 }
 
 $color-white: #fff;
@@ -115,6 +116,7 @@ a {
   justify-content: center;
   flex-direction: column;
   margin: 0px auto;
+  padding: 0px -80px;
 }
 
 .header-title {
@@ -153,11 +155,16 @@ a {
   font-weight: 200;
   margin: 0px 20px 0px 20px;
 }
-
+.btn-header{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
 .btn-h {
   border: none;
   display: flex;
   align-items: center;
+  justify-content: right;
   font-size: 15px;
   text-align: start;
   color: $color-white;
@@ -198,7 +205,9 @@ a {
   text-align: center;
 }
 .hero-about p {
-  letter-spacing: 1px;
+  padding: 0px 70px;
+  font-size: 16px;
+  font-weight: 200;
 }
 .hero-more {
   padding: 15px 30px;
@@ -211,12 +220,20 @@ a {
   cursor: pointer;
 }
 .section-about {
+  // position: inherit;
   background-color: $light-gray;
-  padding: 20px 0;
-  width: 100%;
+  padding: 45px 0;
+  width: 100vw !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  margin-left: -82px !important;
+}
+.section-about-images,
+.about-conf {
+  width: 80%;
+  margin: 0px auto;
 }
 .section-about-images {
-  padding: 0px 20px 10px 20px;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -228,12 +245,12 @@ a {
   padding: 5px 30px;
 }
 .section-about-images .card {
-  margin: 30px 10px;
+  margin: 0px 4px 65px 4px;
   border: none !important;
   background: transparent;
   border-radius: 0 !important;
   text-transform: uppercase;
-  width: 16rem;
+  width: 15rem;
 }
 .card-body {
   padding: 10px 0;
@@ -253,7 +270,6 @@ a {
   height: 150px;
 }
 .section-view {
-  /* padding: 10px; */
   background: linear-gradient(
       to right,
       rgba(12, 11, 11, 0.769),
@@ -263,7 +279,7 @@ a {
     url("https://images.pexels.com/photos/2030037/pexels-photo-2030037.jpeg")
       no-repeat center;
   background-size: cover;
-  min-height: 50vh;
+  min-height: 35vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -273,15 +289,26 @@ a {
   border-radius: 8px;
 }
 .section-view h2 {
-  font-weight: 300;
+  font-weight: 200;
   letter-spacing: 1px;
+  font-size: 42px;
+  letter-spacing: 2.2px;
+  margin-top: 20px;
 }
-.btn-color {
+.section-view p {
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+.btn-color-view {
   background: $gradient-dark;
   border: none;
-  padding: 10px 20px;
-  font-size: 14px;
+  padding: 12px 25px;
+  font-size: 15px;
   letter-spacing: 1px;
+}
+.btn-color-view i {
+  font-weight: bold;
 }
 
 .btn-color-top:hover {
@@ -289,31 +316,99 @@ a {
   color: $color-white;
 }
 .footer {
-  padding: 22px 25px;
-  min-height: 50vh;
+  padding: 22px 0;
+  padding-bottom: 0;
+  min-height: 30vh;
   background-color: $dark-gray;
+}
+.footer-wrap {
+  padding: 25px;
 }
 .footer-title {
   font-weight: bold;
+  font-size: 12px;
 }
-.socials ul {
+.footer-text {
+  font-size: 14px;
+  color: darkgray;
+}
+.footer-text-socials ul {
   display: flex;
   align-items: center;
   justify-content: start;
   flex-direction: row;
 }
-.copy {
-  border-top: 1px solid $color-black;
+.footer-text ul li p,
+.footer-p p {
+  margin: 0px !important;
+  font-weight: 500;
+  margin: 0px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
 }
+.footer-p {
+  margin: 0px;
+}
+.footer-copy {
+  border-top: 1px solid rgba(0, 0, 0, 0.187);
+  max-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-copy {
+  font-size: 12px;
+  font-weight: 200;
+}
+.footer-copy span {
+  font-weight: bold;
+  margin: 0px 4px;
+}
+
 @media screen and (max-width: 768px) {
   .links {
     display: none;
   }
+  .header-title {
+    font-size: 35px;
+  }
   .nav-menu {
     display: flex;
+    padding: 0 20px;
+    font-size: 20px;
+  }
+  .form {
+    padding: 0px 10px;
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+  .hero-about p {
+    padding: 0px 20px;
+  }
+  .section-about {
+    max-width: 100vw !important;
+    margin-left: -20px !important;
   }
   .section-about-images {
-    display: flex;
-    justify-content: center;
+    width: 100%;
+  }
+  .about-conf {
+    width: 80%;
+  }
+  .section-about-images .card {
+    width: 80%;
+    margin-bottom: 10px;
+    margin: 0 auto 10px auto;
+  }
+  .card-img-top {
+    height: 200px;
+  }
+  .section-view h2 {
+    letter-spacing: 1px;
+    font-size: 35px;
+  }
+  .section-view p {
+    font-size: 12px;
   }
 }

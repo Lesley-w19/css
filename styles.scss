@@ -155,7 +155,7 @@ a {
   font-weight: 200;
   margin: 0px 20px 0px 20px;
 }
-.btn-header{
+.btn-header {
   display: flex;
   align-items: center;
   justify-content: right;
@@ -316,13 +316,12 @@ a {
   color: $color-white;
 }
 .footer {
-  padding: 22px 0;
-  padding-bottom: 0;
+  padding: 22px 0 40px 0;
   min-height: 30vh;
   background-color: $dark-gray;
 }
 .footer-wrap {
-  padding: 25px;
+  padding: 25px 25px 50px 25px;
 }
 .footer-title {
   font-weight: bold;
